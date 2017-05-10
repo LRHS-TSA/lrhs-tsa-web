@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { Link } from 'react-router-dom'
+import logo from '../../images/logo.svg'
 
 export default class TopNav extends React.Component {
   constructor(props) {
@@ -20,9 +20,9 @@ export default class TopNav extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light toggleable>
+        <Navbar inverse full color="inverse" light toggleable>
           <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/"><img src={logo} width="80" height="50" /></NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar>
               <NavItem>
