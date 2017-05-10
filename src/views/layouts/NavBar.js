@@ -1,5 +1,7 @@
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import PropTypes from 'prop-types';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
 export default class TopNav extends React.Component {
   constructor(props) {
@@ -22,12 +24,14 @@ export default class TopNav extends React.Component {
           <NavbarToggler right onClick={this.toggle} />
           <NavbarBrand href="/">reactstrap</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <Link className="nav-link" to="/">Home</Link>
               </NavItem>
+            </Nav>
+            <Nav className='ml-auto' navbar>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                <Link className="nav-link" to="/login">Login</Link>
               </NavItem>
             </Nav>
           </Collapse>
