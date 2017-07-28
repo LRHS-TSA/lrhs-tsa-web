@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import { BrowserRouter as Router,
-      Route,
-      Link } from 'react-router-dom';
+      Route } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import TopNav from './views/layouts/NavBar'
